@@ -1,0 +1,229 @@
+body{
+    margin: 0;padding: 0; box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.header{
+    overflow: hidden;
+}
+.header .slider{
+    
+   position: relative;
+}
+
+
+
+.form{
+   background-color: #ffffff;
+    width:40%;
+    height:900px; float:left;
+    margin-top: 50px;
+    padding: 20px 30px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;transition:3s all;
+}
+
+.form h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+ .form label{
+    font-size: 21px;color:#223060;font-weight: 600;
+}
+
+
+
+ .form .small_input, .form .big_input, .form select, .form select option{
+background-color: #ddd9d9;
+height: 40px;
+width:30%;
+border: none;
+margin: 15px 0px 20px;
+outline: 0px;
+color: black;font-size: 18px;
+}
+
+ .form .right_input{
+   float:right;
+   }
+   
+   .form .right_label{
+        position: absolute;
+        left: 53%;
+      }
+
+.form .big_input,.form select{
+  
+    width:100%;
+}
+
+.form .button{
+    background-color:#88c417;
+    padding:18px ;
+    width: 100%;
+    border-radius: 5px;
+    color: #ffffff;
+    margin:20px 0px 10px;
+    border: none;
+    font-size: 25px;
+    outline: 0px;
+   
+}
+
+.form .button:hover{background-color:#223060;}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+
+
+.newHeight{
+ height: 1300px;
+ 
+}
+.oldHeight{height: 800px;}
+
+.resize{
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.resizeCity{
+    width:50%;
+    margin-bottom: 40px;
+}
+.form p{font-size: 18px;color:red}
+
+.right_side{
+    float :right;width:150px;height:250px;display: flex;align-items: center;justify-content: center;text-align: center;
+    width:45%;
+    color:#ffffff;font-size: 28px;margin-top:100px;background-color: #88c417;border-radius:600px;
+
+}
+
+.border{
+    width:400px;height:215px;
+    background-color: #ffffff;
+    float:right;padding: 30px;box-sizing: border-box;margin-top: 100px;position: absolute;bottom:-1000px;
+}
+
+.border .messageRegester{
+
+    width:340px;height: 150px;border:2px solid #223060;color:#88c417;font-size: 30px;
+  text-align: center;font-weight: bolder;
+    line-height: 1.5em;
+}
+
+
+.border .messageRegester span{color:#88c417}
+
+@keyframes mymove {
+    from {right:700px;}
+    to {right:2000px; }
+  }
+
+.movingRrgester{
+    position: absolute;bottom:300px;
+    animation: mymove 6s 1 linear;
+    animation-fill-mode: forwards;
+   }
+
+   
+
+ @keyframes mymove2 {
+        from {right: 100px;}
+        to {right:300px; }
+      }
+.loginform{
+
+animation: mymove2 1s 1 linear;
+animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes mymove3 {
+    from {right: 700px;}
+    to {right:2000px; }
+  }
+
+
+
+.movingLoginForm{
+    position: absolute;right:400px;transition: 1s all;width:40%;
+    animation: mymove3 3s 1 linear;
+animation-fill-mode: forwards;
+   }
+
+
+
+   @keyframes mymove4 {
+    from {right: 100px;}
+    to {right:500px; }
+  }
+   .movingloginSuccess{
+       position: absolute;bottom: 300px;
+    animation: mymove4 1s 1 linear;
+    animation-fill-mode: forwards;
+   }
+
+
+
+   @keyframes mymove5 {
+    from {right: 600px;}
+    to {right:2500px; }
+  }
+   .moveMessageLog{
+       position: absolute;bottom: 300px;right:200px
+   
+   }
+
+
+
+   .borderWrongLogin{
+    width:340px;height:80px;
+    background-color: #ffffff;
+    padding:15px;box-sizing: border-box;margin-top: 100px;position: absolute;bottom:-1000px;
+}
+
+.borderWrongLogin .messageWrongLogin{
+
+    width:310px;height:50px;border:2px solid #223060;color:red;
+  text-align: center;font-weight: bolder;font-size: 20px;
+    line-height: 50px;
+}
+
+
+
+
+
+.hideLoginAndRegester{
+    position: absolute;bottom: -2000px;
+}
+
+
+
+
+
+.movingForm{
+    position: absolute;bottom:2500px;transition: 3s all;
+}
+
+
+.newSliderHeight {
+    height: 900px;
+}
+
+.resizeLogin{
+    margin-top: 30px;margin-bottom: 5px;font-size: 25px;
+}
+

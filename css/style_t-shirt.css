@@ -1,0 +1,24 @@
+.header{
+    height:400px ;
+    margin-bottom: 50px;
+}
+.header .slider{
+    height: 300px;
+    background-image:url('../images/hero-bg.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/*start t-shirt section*/
+
+
+.tshirt-word{
+    background-color:#191d30;width:400px;height: 75px;display: flex;justify-content: center;align-items: center;
+    color:#ffffff;font-size: 40px;font-weight: bold;word-spacing: 20px;margin-bottom:-20px;
+    margin: auto;border-radius:8px;
+}
+.footer_parent{
+    margin-top: 50px;
+}
+/*end t-shirt section*/

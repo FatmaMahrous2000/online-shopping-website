@@ -1,0 +1,297 @@
+
+
+body {
+       font-family: 'Lato', sans-serif;
+}
+/*start header section*/
+
+.header{height:400px}
+.header .slider{
+    height: 200px;
+    background-image:url('../images/breadcrumb-bg.jpg');
+  display: block;
+  padding-top: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header .slider h1{color: #ffffff;font-size: 40px;}
+.header .slider p {
+    display: block;
+    margin-top: -15px;
+    font-size: 20px;
+}
+
+.header .slider a{
+    color:#ffffff;
+}
+
+.header .slider p  i{margin: 0px 20px 0px 4px;}
+
+.header .slider p  span{color:#323232;}
+
+
+
+/*end header section*/
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*start welcome section */
+
+.welcome_parent{
+    height: 500px;
+    margin-top: 100px;
+    overflow: hidden;
+  
+}
+
+.welcome_parent .image_welcome{
+    width:40%;
+    height:450px;
+    background: url('../images/about.jpg'),no-repeat;
+    background-size: cover;
+    float: left;
+    position: relative;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.welcome_parent .image_welcome img{
+    width:100px;
+    height: 100px;
+    position: absolute;
+    right:-50px;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.welcome_parent .text_welcome{
+    width:48%;
+    height:450px;
+    float: right;position: relative;
+
+}
+
+
+.welcome_parent .text_welcome h1{color: #323232;font-size: 35px;}
+
+
+.welcome_parent .text_welcome h4{color: #323232;margin: 10px 0px 70px;font-size: 22px;font-weight: normal;}
+
+.welcome_parent .text_welcome p{font-size: 15px;color:rgb(92, 92, 92) ;line-height: 1.7em;}
+
+.welcome_parent .text_welcome .p1{margin-bottom: 25px;}
+
+
+.welcome_parent .text_welcome a{padding: 15px 35px; color: #ffffff;background-color:#88c417;margin-top: 70px;
+position: absolute;bottom: 10%;border-radius: 3px;font-weight: 700;font-size: 18px;}
+
+.welcome_parent .text_welcome a:hover{background-color: #223060;}
+
+/*end welcome section*/
+
+
+/*start features section*/
+
+.features{
+    width: 1150px;
+    margin: auto;
+    height:270px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+   
+}
+.features .feature_section{
+    width:30%;
+   
+    color: #323232;
+    text-align: justify;
+    
+}
+
+.features .feature_section h3{font-size: 25px;}
+
+.features .feature_section p{font-size: 15px;line-height: 1.7em;}
+/*end features section*/
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*start history section*/
+
+.history_parent{
+    height: 850px;
+    background: url('../images/history-bg.jpg'),no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 75px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.history_parent h1{color: #ffffff;font-size: 45px;}
+
+.history_parent .p_history{font-size: 16px;color: #ffffff;margin: 20px 0px 80px;}
+
+.history_parent img{
+    height: 470px;
+    width:48%;
+    float: left;
+    border-radius: 5px;
+}
+.history_parent .history_text{
+     width:48%;
+     height: 470px;
+     float: right;
+     border-left: 2px solid  rgb(168, 168, 168);
+     border-right: 5px solid rgb(136, 196, 23,.5);
+     padding-left: 35px;
+     padding-top:20px;
+     box-sizing: border-box;
+     text-align: left;
+     position: relative;
+}
+
+.history_text .point{
+    display: inline-block;width:10px;
+    height:10px;border-radius: 50%;background-color: #88c417;border: 5px solid rgb(117, 116, 116);
+    position: absolute;left:-10px;
+}
+
+.history_parent .history_text span{
+    color: #88c417;
+    font-size: 17px;
+}
+
+.history_parent .history_text h1{
+    font-size: 26px;color: #ffffff;
+    margin: 6px 0px -5px;
+}
+
+.history_parent .history_text p{
+    font-size: 15px;color: #ffffff;line-height: 1.6em;
+    margin-bottom: 60px;
+
+}
+
+/*end history section*/
+
+
+
+/*start request section*/
+.parent_request{margin-top: 70px;}
+/*end request section*/
+
+
+/*start our team section*/
+
+.our_team_heading{
+    margin-top: 50px;
+    height:150px ;
+}
+.our_team_heading .container{position: relative;}
+.our_team_heading h1{color:#323232;display: block;}
+.our_team_heading p{
+    color: #323232;
+}
+.our_team_heading a{
+    background-color: #88c417;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px 40px;
+    position: absolute;
+    top:0px;right: 0px;
+    font-weight: 600;
+    border-radius: 3px;
+
+}
+
+.our_team_heading a:hover{background-color: #223060}
+
+.our_team_sections{
+    height: 460px;
+    margin-bottom: 100px;
+
+}
+
+.our_team_sections .container{
+    display: flex;
+    justify-content: space-between;
+
+}
+.our_team_sections .common_section{
+    width:31%;
+    height:460px;
+    box-sizing: border-box;
+    overflow: hidden;
+   position: relative;
+}
+
+.our_team_sections .section1{
+    
+    background: url('../images/team-1.jpg'),no-repeat;
+    background-size: cover;
+
+}
+
+.our_team_sections .section2{
+    background: url('../images/team-2.jpg'),no-repeat;
+    background-size: cover;
+}
+.our_team_sections .common_section .layer{transition: .5s all;}
+
+.our_team_sections .common_section .hidden{
+    position: absolute;bottom: -70%; 
+    padding: 30px 35px; box-sizing:border-box;
+    transition: .5s all;
+}
+
+.our_team_sections .common_section h2{color: #ffffff;}
+
+
+.our_team_sections .common_section span{
+    color: #88c417;
+    font-size: 17px;
+}
+
+.our_team_sections .common_section hr{
+    border-bottom: 1px solid rgb(168, 168, 168,.2);
+    margin: 30px 0px 30px;
+}
+
+
+.our_team_sections .common_section p{
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.7em;
+    margin: 0px 0px 100px;
+}
+
+.our_team_sections .common_section i{color: #ffffff;font-size: 25px;}
+
+.our_team_sections .common_section i:hover{
+    color: #88c417;font-size: 24px;
+}
+.our_team_sections .common_section .fa-instagram{
+  margin: 0px 40px;
+}
+
+.our_team_sections .common_section:hover .layer{
+
+    width: 100%;height: 100%;
+background-color:rgba(34, 48, 96, 0.8);
+
+}
+
+.our_team_sections .common_section:hover .hidden{
+    position: absolute;bottom: 0px;
+}
+
+/*end our team section*/
+
+
+
+
