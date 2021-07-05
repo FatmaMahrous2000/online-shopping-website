@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regester</title>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/style_regester.css">
+</head>
+<body>
+    
+  
+
+    <div class="header"id="test" :style="{height:heightHeader + 'px'}">
+
+
+        <div class="locations">
+            <div class="container">
+                <p class="p_location"><i class="fa fa-map-marker" ></i>96 Ernser Vista Suite 437, NY, US</p>
+
+                <p class="p_location"><i class="fa fa-phone" ></i> (123) 456-78-910</p>
+
+                <p class="p_location"><i class="fa fa-envelope" ></i> Info@lifeStyle.com</p>
+
+
+
+
+                  
+
+            </div>
+        </div>
+
+
+
+
+        <div class="nav_bar">
+            <div class="container">
+              
+                     <div class="floating">
+                         
+                <p>Life <span>Style</span></p>
+                    <a href="index.html" class="active">Home</a>
+                  
+                    <div class="dropdownn">
+                    
+                    <button class="dropbtnn link">Products</button>
+
+                    <div class="dropdownn-content">
+                    
+                             <a href="t-shirt.html">T-shists</a>
+                             <a href="shoes.html">Shoes</a>
+                             <a href="bags.html">Bages</a>
+                             <a href="watches.html">Watches</a>
+                        
+                    </div>
+                </div>
+
+                    <a href="regester.html" class="link">Regester or login</a>
+                    <a href="about.html" class="link">About</a>
+                    <button style="background:none;border: none;margin-top: 25px;"   @click=" viewCart=true">
+                        <i class="fa fa-shopping-cart" style="color:#323232;font-size: 40px;"></i>
+                    </button>
+                  
+            </div>
+
+                
+
+            </div>
+        </div>
+
+        <div class="slider"  :style="{height:heightSlider + 'px'}">
+            <div class="container" >
+
+            
+                    <div   class="form"  :class="{newHeight : checkAny, movingForm : regesterSuccess, hideLoginAndRegester : checkLogin }" >
+            
+
+                    <label>User Name :</label>
+                    <input type="text" class="big_input" v-model="name">
+                    <p  v-if="!name && nameEmpty" :class="{resize:validateName()}">{{messageName}}</p>
+                    <p v-else-if="!validateName()" :class="{resize:!validateName()}">{{messageName}}</p>
+                    
+
+
+                <label>E-mail :</label>
+                <input type="text" class="big_input" v-model="email" ><br>
+                <p  v-if="!email && emailEmpty" :class="{resize:validateEmail()}">{{messageEmail}}</p>
+                <p v-else-if="!validateEmail()"  :class="{resize:!validateEmail()}">{{messageEmail}}</p>
+
+
+                <label>Password :</label>
+                <input type="text" class="big_input "  v-model="password" >
+                 <p  v-if="!password && passwordEmpty" :class="{resize:validateName()}">{{messagePassword}}</p>
+                 <p v-else-if="!validatePassword()"  :class="{resize:!validateName()}">{{messagePassword}}</p>
+
+
+
+
+                <label >Phone Number:</label>
+               <input type="text" class=" big_input " v-model="phone" maxlength="11">
+               <p  v-if="!phone && phoneEmpty" :class="{resize:validatePhone()}">{{messagePhone}}</p>
+               <p v-else-if="!validatePhone()"  :class="{resize:!validatePhone()}">{{messagePhone}}</p>
+
+
+
+                <label>city :</label>
+                <select v-model="city">
+                    <option >Cairo</option>
+                    <option>Giza</option>
+                    <option >Alexandia</option>
+                    <option >Port-saed</option>
+                </select>
+                <p  v-if="!city && cityEmpty" :class="{resize:true}">{{messageCity}}</p>
+
+
+
+                <label >Postal / Zip code :</label>
+                <input type="text" class=" big_input" v-model="postal" maxlength="5">
+                <p  v-if="!postal && postalEmpty" :class="{resize:validatePostal()}">{{messagePostal}}</p>
+                <p v-else-if="!validatePostal()"  :class="{resize:!validatePostal()}">{{messagePostal}}</p>
+
+                        <input @click="validate" type="submit" class="button">
+                    
+                </div>
+                
+
+
+                <div class="form " style="height: 400px; float:right;" :class="{loginform:regesterSuccess,movingLoginForm:checkLogin}" >
+        
+                    <label>User Name :</label>
+                    <input type="text" class="big_input" v-model="userNameLogin"><br>
+                    <p  v-if="!userNameLogin && userNameLoginEmpty" :class="{resize:true}">{{messageUserNameLogin}}</p>
+
+
+                        <label>Password :</label>
+                        <input type="text" class="big_input" v-model="passwordLogin">
+                        <p  v-if="!passwordLogin && passwordLoginEmpty" :class="{resize:true}">{{messagePasswordLogin}}</p>
+
+
+                        <input @click="validateLogin()" type="submit" class="button" value="Login">
+
+                   </div>
+
+
+               <div class="border"  :class="{movingRrgester : regesterSuccess}">
+                   <div class="messageRegester"> <p>You have been regesterd successfully
+                    <i class="fa fa-check-circle" style="font-size:50px;color:#223060;margin-left: 10px;"></i></p>
+                   </div>
+               </div>
+
+               <div class="border"  :class="{movingloginSuccess:checkLogin}">
+                <div class="messageRegester"> <p>You have been login successfully
+                 <i class="fa fa-check-circle" style="font-size:50px;color:#223060;margin-left: 10px;"></i></p>
+            
+                </div>
+            </div>
+
+            <div class="borderWrongLogin" :class="{moveMessageLog:checkNoLogin}" >
+                <div class="messageWrongLogin">invalid username or password
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="cart"  :class="{viewCarttt:viewCart ,cart: !viewCart}" >
+            <h1 style="float:right;margin-right:50px;color: #182143;">Your Cart</h1>
+          <button style="background:none;border: none;margin: 25px;" @click="viewCart=false">
+
+            <i class="fa fa-close" style="font-size:48px;color:red"></i>
+        
+          </button>
+
+          <div class="elements" v-for="item in items">
+              <div style="margin-top: -10px;">
+                  <p style="font-size: 22px; color:#ffffff ;font-family: 'Lato', sans-serif;font-weight: bold;text-align: center;">Product</p>
+                <img v-bind:src="item.image">
+            </div>
+
+            <div style="font-size: 25px; color: #182143;font-family: 'Lato', sans-serif;font-weight: bold;text-align:left;color:#182143;margin-left: 45px;margin-top: -10px;">
+                <p >Price<br><br>{{item.price +'.00 $'}}</p>
+                
+            </div>
+
+
+            <button style="border: none;background-color: inherit;" @click="removeProduct(item)">
+            <i class="fa fa-trash-o" style="font-size:40px;color:red;text-align: center;margin-top: 30px;"></i>
+             </button>
+        </div>
+        <hr style="color: #182143;margin:20px;border:1px solid #182143;">
+        <div>
+        
+            <p style="color: #182143;margin-left: 20px;font-size: 25px;font-weight: 700;">Total Payment : 
+           <span style="float: right; margin-right: 20px;">{{sum +'.00 $'}}</span>
+        </p>
+        </div>     
+           </div>
+    </div>
+    <!--end header section-->
+  
+<script src="js/vue (1).js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

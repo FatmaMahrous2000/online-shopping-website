@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regester</title>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/style_regester.css">
+
+    
+</head>
+<body>
+    
+   
+    <!--srart header section-->
+
+    <div class="header" style="height: 650px;"  id="test">
+
+
+        <div class="locations">
+            <div class="container">
+                <p class="p_location"><i class="fa fa-map-marker" ></i>96 Ernser Vista Suite 437, NY, US</p>
+
+                <p class="p_location"><i class="fa fa-phone" ></i> (123) 456-78-910</p>
+
+                <p class="p_location"><i class="fa fa-envelope" ></i> Info@colorlib.com</p>
+
+
+
+
+                  
+
+            </div>
+        </div>
+
+
+
+
+        <div class="nav_bar">
+            <div class="container">
+              
+                
+                     <div class="floating">
+                        <p>Life <span>Style</span></p>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html" class="link">About</a>
+                    <div class="dropdownn">
+                    
+                    <button class="dropbtnn link">Products</button>
+
+                    <div class="dropdownn-content">
+                    
+                             <a href="t-shirt.html">T-shists</a>
+                             <a href="shoes.html">Shoes</a>
+                             <a href="bags.html">Bages</a>
+                             <a href="watches.html">Watches</a>
+                        
+                    </div>
+                </div>
+
+                    <a href="regester.html" class="link">Regester</a>
+                    <a href="login.html" class="link">Login</a>
+                    <a href="contact.html" class="link">Contact</a>
+                    <a href=""><i class="fa fa-shopping-cart" style="color:#323232;font-size: 40px;"></i></a>
+                  
+            </div>
+
+                
+
+            </div>
+        </div>
+
+        <div class="slider" style="height: 600px;">
+            <div class="container" >
+
+              
+                   <div class="form" style="height: 400px;" :class="{movingForm : checkLogin}" >
+        
+                    <label>User Name :</label>
+                    <input type="text" class="big_input" v-model="userNameLogin"><br>
+                    <p  v-if="!userNameLogin && userNameLoginEmpty" :class="{resize:true}">{{messageUserNameLogin}}</p>
+
+
+                        <label>Password :</label>
+                        <input type="text" class="big_input" v-model="passwordLogin">
+                        <p  v-if="!passwordLogin && passwordLoginEmpty" :class="{resize:true}">{{messagePasswordLogin}}</p>
+
+
+                     <!--   <p  v-if="checkNotLogin&&userNameLogin!=''&&passwordLogin!=''" :class="{resizeLogin:true}">invalid user name or password</p>
+                        <p  v-else-if="!checkNotLogin&&(userNameLogin==''||passwordLogin=='')"></p>-->
+                        <input @click="validateLogin()" type="submit" class="button" value="Login">
+
+                    
+                   </div>
+
+                   <div class="border"  :class="{movingRrgester : checkLogin}">
+                    <div class="messageLogin"> <p>Welcome {{userNameLogin}}, You have been login successfully
+                     <i class="fa fa-check-circle" style="font-size:50px;color:#223060;margin-left: 10px;"></i></p>
+                    </div>
+                </div>
+
+                <div :class="{loginBorderMoving : checkNotLogin}">
+                <div class="loginBorder" :class="{loginBorder:checkLoginMessage}">
+                  <div class="wrongLoginMessage"><p>invalid username or password</p> 
+                    <button @click="checkLoginMessage = true">
+                        Ok
+                    </button>
+                    
+                </div>
+                    
+                </div>
+            </div>
+
+                </div> 
+
+            </div>
+        </div>
+    </div>
+    <!--end header section-->
+<script src="js/vue (1).js"></script>
+<script src="js/app.js"></script>
+
+    
+</body>
+</html>
